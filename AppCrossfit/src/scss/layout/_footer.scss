@@ -1,0 +1,38 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer-fondo {
+    background-color: v.$azul;
+    height: 90px;
+
+    @include m.telefono {
+        height: 90px;
+    }
+    @include m.tablet {
+        height: 80px;
+    }
+}
+
+footer {
+
+    
+    svg {
+        fill: v.$blanco;
+        margin-left: 2rem;
+    }
+}
+
+
+
+.alto {
+    height: 100%;
+
+}
+.centrar-telefono {
+    justify-content: center;
+    text-align: center;
+    @include m.telefono {
+        
+    }
+}
+
