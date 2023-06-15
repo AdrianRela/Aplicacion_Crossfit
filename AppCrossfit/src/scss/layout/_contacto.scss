@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-footer-contacto {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: v.$azul;
+
+    .contenedor-footer-horario {
+        display: flex;
+        justify-content: start;
+    }
+    
+    // @include m.telefono {
+    //     display: grid;
+    //     grid-template-columns: repeat(3, 1fr);
+    //     grid-gap: 10px;
+    // }
+    @include m.tablet {
+        background-color: v.$azul;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+
+        .contenedor-footer-mapa {
+            display: flex;
+            justify-content: center;
+        }
+        .contenedor-footer-horario {
+            display: flex;
+            justify-content: center;
+        }
+        
+    }
+}

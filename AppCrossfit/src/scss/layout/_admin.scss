@@ -1,0 +1,137 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-admin {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    
+
+    @media (max-width: 950px) {
+        display: flex;
+        flex-direction: column;
+        
+    }
+   
+}
+  
+.izquierda {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: v.$separacion;
+    grid-gap: 5px;
+    
+
+    @media (max-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        button {
+          margin: 5px;
+          width: 250px;
+        }
+    }
+}
+
+.columna1 {
+    display: none; /* Ocultar la columna central */
+}
+.central {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: v.$separacion;
+    grid-gap: 5px;
+    
+
+    @media (max-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        button {
+          margin: 5px;
+          width: 250px;
+        }
+    }
+}
+
+.columna2 {
+    display: none; /* Ocultar la columna derecha */
+}
+
+.derecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: v.$separacion;
+    
+    button {
+        margin: 5px;
+        width: 250px;
+        color: v.$azul;
+        background-color: v.$blanco;
+    }
+
+}
+
+.form-admin-insertar{
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+  
+    input {
+        display: block;
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    button {
+        margin-top: v.$separacion;
+    }
+}
+
+.form-admin-actualizar {
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input {
+        display: block;
+        width: 25%;
+        padding: 5px;
+        margin-bottom: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+}
+
+#formulario-admin {
+  select {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin: 50px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #555;
+  }
+  
+  select:hover {
+    border-color: #888;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
+  }
+}
