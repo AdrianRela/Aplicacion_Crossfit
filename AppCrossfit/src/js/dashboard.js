@@ -153,7 +153,6 @@ function seleccionarCelda(celda) {
         }
         celdaSeleccionada = celda;
         celdaSeleccionada.classList.add('seleccionada');
-        // Obtener el índice de columna al recorrer los elementos <td> hermanos
         // Obtener la celda padre <td>
         const td = celda.parentElement;
         const columna = Array.from(td.parentNode.children).indexOf(td);
